@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博物数智</title>
+    <style>
+        .bg-blur {
+            position: fixed; /* 固定在屏幕最底层 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* 放在最底下 */
+            background-image: url("../博物数智/博物数智背景图.jpg"); /* 这里是你的背景图名字 */
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px); /* 虚化程度，数值越大越糊 */
+            opacity: 0.6; /* 透明度，数值越小越淡 */
+        }
+        .container {
+            text-align: center; /* 行内元素居中 */
+            margin: 0 auto;     /* 块级元素居中 */
+            max-width: 1200px;   /* 限制最大宽度，美观 */
+        }
+        h1{
+            color: #FFBC55;
+            text-align: center;
+            font-size: 100px;
+            font-weight: bold;
+            letter-spacing: 40px;
+        }
+        body{
+            background-color: #2D1601;
+            margin: 0;
+            padding: 40px;
+        }
+        video {
+            display: block;     /* 转为块级元素 */
+            margin: 0 auto;     /* 水平居中 */
+            max-width: 100%;    /* 自适应宽度 */
+            height: auto;       /* 高度自适应 */
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-blur"></div>
+    <div class="container">
+        <h1><strong>博物数智</strong></h1>
+        <!-- 视频添加 muted 属性实现静音 -->
+        <video src="../博物数智/博物数智.mp4" controls loop muted autoplay></video>
+    </div>
+</body>
+</html>
